@@ -3,44 +3,172 @@
 <head>
     <title>Personal Profile - Zeki Quiboloy</title>
     <style>
-    body {
-      background-color: purple;
-    }
-  </style>
+        body {
+            background-color: purple;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        /* Main outer container */
+        .main-container {
+            background-color: #4a0072;
+            border: 3px solid antiquewhite;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 850px;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .card {
+            background-color: #f4f4f4;
+            color: #222;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .header-card {
+            text-align: center;
+        }
+
+        .header-card h1 {
+            margin: 0 0 10px 0;
+            color: purple;
+        }
+
+        /* Nav links using Flexbox */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: purple;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .card h3 {
+            color: purple;
+            margin-top: 0;
+        }
+
+        /* 3-Column Section using CSS Grid */
+        .grid-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e8d5f5;
+        }
+
+        .gallery-card {
+            text-align: center;
+        }
+
+        .gallery-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Personal Profile Web page</h1>
+    <div class="main-container">
 
-    <ul>
-        <li>About Me (Zeki Quiboloy)</li>
-        <li>(Do not include birthdate / age / contact information)</li>
-        <li>Education / Achievements
-  <ul>
-    <li><strong>Asia Pacific College</strong> (1st Year – Present)<br>
-      Bachelor of Science in Computer Science (Cybersecurity and Forensics)
-    </li>
-    <li><strong>Centro Escolar University (CEU) Makati</strong> (Grade 11 – Grade 12)<br>
-      Senior High School – STEM Track
-    </li>
-    <li><strong>St. John Paul II Academy</strong> (Grade 2 – Grade 10)<br>
-      With Honors
-    </li>
-    <li><strong>Rising Achievers Academy</strong> (Preschool – Grade 1)<br>
-      With Honors
-    </li>
-  </ul>
-</li>
-        <li>Computer Science with specialization in Cybersecurity and Forensics</li>
-        <li>Freelance and Aventus</li>
-        <li>Sports, Video Games, Coding</li>
-        <li>My goal is for my family and the people in my life to never worry about their needs.</li>
-        <li>Picture Gallery</li>
-    </ul>
+        <div class="card header-card">
+            <h1>Personal Profile Web page</h1>
+            <div class="nav-links">
+                <a href="#about">About Me</a>
+                <a href="#education">Education</a>
+                <a href="#details">Details</a>
+                <a href="#goal">Goals</a>
+                <a href="#gallery">Picture Gallery</a>
+            </div>
+        </div>
 
-    <p>
-        <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1000&q=80" alt="Basketball player on court" width="800" height="500">
-    </p>
+        <div class="card" id="about">
+            <h3>About Me (Zeki Quiboloy)</h3>
+            <p>I study at Asia Pacific College, currently in my 1st year of college pursuing a Bachelor of Science in Computer Science with a specialization in Cybersecurity and Forensics[cite: 3, 7].</p>
+        </div>
+
+        <div class="card" id="education">
+            <h3>Education / Achievements</h3>
+            <table>
+                <tr>
+                    <th>School / Level</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td><strong>Asia Pacific College</strong> (1st Year - Present)[cite: 3, 7]</td>
+                    <td>Bachelor of Science in Computer Science (Cybersecurity and Forensics)[cite: 3, 7]</td>
+                </tr>
+                <tr>
+                    <td><strong>Centro Escolar University (CEU) Makati</strong> (Grade 11 - 12)[cite: 3, 7]</td>
+                    <td>Senior High School – STEM Track[cite: 3, 7]</td>
+                </tr>
+                <tr>
+                    <td><strong>St. John Paul II Academy</strong> (Grade 2 - Grade 10)[cite: 3, 7]</td>
+                    <td>With Honors[cite: 3, 7]</td>
+                </tr>
+                <tr>
+                    <td><strong>Rising Achievers Academy</strong> (Preschool – Grade 1)[cite: 3, 7]</td>
+                    <td>With Honors[cite: 3, 7]</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 3-Column CSS Grid Row -->
+        <div class="grid-row" id="details">
+            <div class="card">
+                <h3>Course</h3>
+                <p>Computer Science with specialization in Cybersecurity and Forensics[cite: 7].</p>
+            </div>
+            <div class="card">
+                <h3>Experience</h3>
+                <p>Freelance and Aventus[cite: 7].</p>
+            </div>
+            <div class="card">
+                <h3>Interests</h3>
+                <p>Sports, Video Games, Coding[cite: 7].</p>
+            </div>
+        </div>
+
+        <div class="card" id="goal">
+            <h3>Goals in Life</h3>
+            <ol>
+                <li>My goal is for my family and the people in my life to never worry about their needs[cite: 7].</li>
+            </ol>
+        </div>
+
+        <div class="card gallery-card" id="gallery">
+            <h3>Picture Gallery</h3>
+            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1000&q=80" alt="Basketball">
+        </div>
+
+    </div>
 
 </body>
 </html>
